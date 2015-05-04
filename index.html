@@ -81,7 +81,7 @@
                                 <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                             </li>
                             <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                                <button type="button" data-toggle="modal" href="#contactForm" class="btn btn-default btn-lg"> <span class="glyphicon glyphicon-envelope "></span> <span class="network-name"> Message Us</span></button>
                             </li>
                             <li>
                                 <a href="http://au.linkedin.com/in/jamesmcmanamey" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
@@ -202,7 +202,7 @@
                             <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                         </li>
                         <li>
-                            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                             <button type="button" data-toggle="modal" href="#contactForm" class="btn btn-default btn-lg"> <span class="glyphicon glyphicon-envelope "></span> <span class="network-name"> Message Us</span></button>
                         </li>
                         <li>
                             <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
@@ -216,6 +216,54 @@
 
     </div>
     <!-- /.banner -->
+
+    <!--/ contact form -->
+            <div class="row">
+
+            <div class="modal fade" id="contactForm" tableindex=- 1 role="dialog" aria-labelledby="contactFormLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">We'd love to hear from you</h4>
+                        </div>
+                        <div class="modal-body">
+
+
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class=" control-label col-sm-2" for="nameField"><span class= "glyphicon glyphicon-user blue gi-2x"></span></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="nameField" placeholder=" Your name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="emailField"><span class= "glyphicon glyphicon-envelope blue gi-2x"></span></label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control col-sm-10" id="emailField" placeholder="email@you.com (so that we can contact you)" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="messageField"><span class= "glyphicon glyphicon-pencil blue gi-2x"></span></label>
+                                    <div class="col-sm-10">
+                                    <textarea class ="form-control" id="messageField" placeholder="Please type us a message.." rows="4"></textarea>
+                                    </div>
+                                </div>
+
+                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
 
     <!-- Footer -->
     <footer>
