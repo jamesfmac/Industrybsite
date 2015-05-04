@@ -48,39 +48,65 @@
             </div>
         </div>
              -->
-            <!--modal contact form -->
-            <div class = "row">
+        <!--modal contact form -->
+        <div class="row">
 
-                <div class="modal fade" id="contactForm" tableindex= -1 role="dialog" aria-labelledby ="contactFormLabel" aria-hidden ="true" >
-                <div class="modal_dialog">
+            <div class="modal fade" id="contactForm" tableindex=- 1 role="dialog" aria-labelledby="contactFormLabel" aria-hidden="true">
+                <div class="modal-dialog">
                     <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden ="true">&times;</button>
-                        <h4 class="modal-title">Contact Us</h4>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">We'd love to hear from you</h4>
                         </div>
-                    <div class="modal-body">
-                        Body of the modal
+                        <div class="modal-body">
+
+
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class=" control-label col-sm-2" for="nameField"><span class= "glyphicon glyphicon-user blue gi-2x"></span></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="nameField" placeholder=" Your name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="emailField"><span class= "glyphicon glyphicon-envelope blue gi-2x"></span></label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control col-sm-10" id="emailField" placeholder="email@you.com (so that we can contact you)" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="messageField"><span class= "glyphicon glyphicon-pencil blue gi-2x"></span></label>
+                                    <div class="col-sm-10">
+                                    <textarea class ="form-control" id="messageField" placeholder="Please type us a message.." rows="4"></textarea>
+                                    </div>
+                                </div>
+
+                            </form>
+
                         </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Submit</button>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
-                    </div>
                 </div>
+            </div>
 
 
-                </div>
+        </div>
 
-<button type="button" data-toggle="modal" href="#contactForm"> Contact Us </button>
-
+        <div class="row">
+            <div class=" col-md-1 col-md-offset-5">
+                <button type="button" data-toggle="modal" href="#contactForm" class="btn btn-default btn-lg"> Contact Us </button>
+            </div>
+        </div>
     </div>
-<script>
-    console.log("test")
+    <script>
+        console.log("test")
     </script>
 
 
-     <!-- jQuery -->
+    <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
