@@ -78,15 +78,11 @@
                         <h3>Hospitality management made... simple</h3>
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            </li>
+
                             <li>
                                 <button type="button" data-toggle="modal" href="#contactForm" class="btn btn-default btn-lg"> <span class="glyphicon glyphicon-envelope "></span> <span class="network-name"> Message Us</span></button>
                             </li>
-                            <li>
-                                <a href="http://au.linkedin.com/in/jamesmcmanamey" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                            </li>
+
                         </ul>
 
                 </div>
@@ -199,15 +195,11 @@
                 </div>
                 <div class="col-lg-6 col-lg-offset-0 col-xs-4 col-xs-offset-4">
                     <ul class="list-inline banner-social-buttons ">
-                        <li  >
-                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                        </li>
+
                         <li>
                              <button type="button" data-toggle="modal" href="#contactForm" class="btn btn-default btn-lg"> <span class="glyphicon glyphicon-envelope "></span> <span class="network-name"> Message Us</span></button>
                         </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -220,49 +212,63 @@
 
     <!--/ contact form -->
             <div class="row">
+    <!--modal contact form -->
+    <div class="row">
+	    <?php
+	include 'phpsettings.php';
+	?>
 
-            <div class="modal fade" id="contactForm" tableindex=- 1 role="dialog" aria-labelledby="contactFormLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">We'd love to hear from you</h4>
-                        </div>
-                        <div class="modal-body">
-                            <form class="form-horizontal">
-                                <div class="form-group">
-                                    <label class=" control-label col-sm-2" for="nameField"><span class= "glyphicon glyphicon-user blue gi-2x"></span></label>
-                                    <div class="col-sm-10">
-                                        <input type="text" style="font-size:16px" class="form-control-required" id="nameField" placeholder=" Name" required>
-                                    </div>
+        <div class="modal fade" id="contactForm" tableindex=- 1 role="dialog" aria-labelledby="contactFormLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" >
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">We'd love to hear from you</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <form class="form-horizontal" role = "form" action = "indb.php" method = "post">
+                            <div class="form-group">
+                                <label class=" control-label col-sm-2" for="nameField"><span class="glyphicon glyphicon-user blue gi-2x"></span>
+                                </label>
+                                <div class="col-sm-10">
+                                    <input style="font-size:16px" type="text" class="form-control" name ="nameField" id="nameField" placeholder=" Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="emailField"><span class="glyphicon glyphicon-envelope blue gi-2x"></span>
+                                </label>
+                                <div class="col-sm-10">
+                                    <input style="font-size:16px" type="email" class="form-control col-sm-10" name = "emailField" id="emailField" placeholder="email@you.com (so that we can contact you)" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="messageField"><span class="glyphicon glyphicon-pencil blue gi-2x"></span>
+                                </label>
+                                <div class="col-sm-10">
+                                    <textarea style="font-size:16px" class="form-control" name ="messageField" id="messageField" placeholder="Please type us a message.." rows="4"></textarea>
+                                </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-2" for="emailField"><span class= "glyphicon glyphicon-envelope blue gi-2x"></span></label>
-                                    <div class="col-sm-10">
-                                        <input type="email" style="font-size:16px" class="form-control-required col-sm-10" id="emailField" placeholder="Email@you.com" required>
+                                <div class = "col-sm-3 col-sm-offset-3">
+                               <div class="g-recaptcha" data-sitekey="6LdpBAkTAAAAAAjsMBRFLzjaDlXIOBwDgKgE0r4R"></div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-sm-2" for="messageField"><span class= "glyphicon glyphicon-pencil blue gi-2x"></span></label>
-                                    <div class="col-sm-10">
-                                    <textarea class ="form-control" style="font-size:16px" id="messageField" placeholder="Please type us a message.." rows="4"></textarea>
-                                    </div>
-                                </div>
+                            </div>
 
-                            </form>
 
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Submit</button>
+                    </div>
+                    <div class="modal-footer">
+                         <button class = "btn btn-primary btn-lg type ="submit" name = "submit" id ="submit" value = "send">Send Message</button>
+
+
                         </div>
                     </div>
-                </div>
-            </div>
-
-
+                    </div>
         </div>
+    </div>
 
+
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -297,6 +303,10 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+
+    <!-- captcha validation -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </body>
 
