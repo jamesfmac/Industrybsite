@@ -26,3 +26,18 @@ mq.addListener(function (changed) {
         document.getElementById("btnSubmit").disabled = true;
     }
 });
+
+var showAlert = function () {
+    $("#alertSuccess").addClass("in");
+    setTimeout(function(){$("#alertSuccess").removeClass("in")},5000);
+}
+
+
+var slideAlert = function () {
+    $("#alertSuccess").addClass("in");
+    $("#alertSuccess").fadeTo(2000, 500).slideUp(500, function(){
+               $("#alertSuccess").removeClass('in');
+                });
+
+}
+$("#tstbtn").on("click", slideAlert);
